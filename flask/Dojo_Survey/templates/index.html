@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Dojo Survey</title>
+</head>
+<body>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class='dojo-survey'>
+              Dojo Survey
+            </h1>
+          </div>
+
+          <div class="col-md-9">
+            <form action='/process' method='post'>
+              <div>
+                <label for=" fname">First name:</label>
+                <input type="text" id="fname" name="fname">
+              </div>
+              <div>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname">
+              </div>
+              <div class="location-form row">
+                <label for="location">Dojo Location:</label>
+                <div class="row">
+                  <input type="radio" id="online" name="location" value="Online">
+                  <label for="online"> Online</label><br>
+                  <input type="radio" id="Seattle" name="location" value="Seattle">
+                  <label for="Seattle"> Seattle</label><br>
+                  <input type="radio" id="San Jose" name="location" value="San Jose">
+                  <label for="San Jose"> San Jose</label><br>
+                  <input type="radio" id="Los Angelos" name="location" value="Los Angeles">
+                  <label for="Los Angeles"> Los Angeles</label><br>
+                  <input type="radio" id="New York" name="location" value="New York">
+                  <label for="New York"> New York</label><br>
+                </div>
+              </div>
+              <div class="fav_Language-form row"> 
+                <label for="fav_Language">Favorite Language:</label>
+                <div class="row">
+                  <select name = "fav_Language" class ="form-control">
+                      <option value = "HTML">HTML</option>
+                      <option value = "Ruby">Ruby</option>
+                      <option value = "Java">Java</option>
+                      <option value = "Python">Python</option>
+                      <option value = "Javascript">Javascript</option>
+                      <option value = "C">C</option>
+                      <option value = "Cplus">C++</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="comment">Comment (optional):</label>
+                <textarea id="comment" name="comment" cols="30" rows="10" placeholder="Type Comment Here . . ."></textarea>
+              </div>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>    
+</body>
+</html>

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1 {
+    font-size: 300%;
+}
+.contain{
+    max-height: 900px;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.box {
+    height: 200px;
+    width: 300px;
+
+}
+tr { display: block; float: left; }
+th, td { display: block; }
